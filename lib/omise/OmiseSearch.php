@@ -121,6 +121,20 @@ class OmiseSearch extends OmiseApiResource
     {
         return $this->mergeAttributes('order', $order);
     }
+    
+    /**
+     * Update `expand` parameter.
+     *
+     * @param  boolean $expand  expand attributes will return.
+     *
+     * @see    https://www.omise.co/search-api
+     *
+     * @return OmiseSearch  This instance.
+     */
+    public function expand($expand)
+    {
+        return $this->mergeAttributes('expand', $expand);
+    }
 
     /**
      * Check whether this search instance is dirty or not.
